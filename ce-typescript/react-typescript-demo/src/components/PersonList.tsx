@@ -1,9 +1,10 @@
+import {Name} from './Person.types'
+
 type PersonListProps = {
-    names:{
-        first:string
-        last:string
-    }[]
+    names:Name[]
 }
+
+// instead of first and last we can use Name from Types
 
 // }[] for array
 const PersonList = (props:PersonListProps) => {
