@@ -14,7 +14,7 @@ type ListProps<T> = {
 
 // T extends {id:number} for accessing id or name
 
-export const List = <T extends {}>({ items, onClick }: ListProps<T>) => {
+export const List = <T extends {first:string,last:string}>({ items, onClick }: ListProps<T>) => {
   return (
     <div>
       <h2>List of items</h2>
@@ -22,6 +22,7 @@ export const List = <T extends {}>({ items, onClick }: ListProps<T>) => {
         return (
           <div key={index} onClick={() => onClick(item)}>
             {/* {item} ERROR */}
+            {item.first} {item.last}
           </div>
         );
       })}
